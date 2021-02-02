@@ -2,6 +2,8 @@ variable "project" {
   type = string
 }
 
+BREAK STUFF 
+
 variable "location" {
   type    = string
   default = "us-central1"
