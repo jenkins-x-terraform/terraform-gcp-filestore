@@ -13,17 +13,17 @@ variable "fs-name" {
 }
 
 variable "tier" {
-  type = string
+  type    = string
   default = "STANDARD"
 }
 
 variable "capacity" {
-  type = string
+  type    = string
   default = "1024"
 }
 
 variable "filestore" {
-  type = string
+  type    = string
   default = "filestore"
 }
 
@@ -34,8 +34,8 @@ variable "fs-network" {
 
 
 provider "google" {
-  project     = var.project
-  region      = var.location
+  project = var.project
+  region  = var.location
 }
 resource "google_filestore_instance" "instance" {
   name = var.fs-name
