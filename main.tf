@@ -2,6 +2,8 @@ variable "project" {
   type = string
 }
 
+BAD THING
+
 variable "location" {
   type    = string
   default = "us-central1"
