@@ -8,10 +8,11 @@ jobs:
     - uses: hashicorp/setup-terraform@v1
 
     - run: terraform init
-
-    - run: terraform lint
-
+      
     - run: terraform fmt -check -diff -recursive
+
+    - name: Lint Terraform
+      uses: actionshub/terraform-lint@main
 
 "on":
   push:
