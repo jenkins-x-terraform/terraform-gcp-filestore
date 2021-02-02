@@ -1,9 +1,0 @@
-name: Verify Terraform
-steps:
-- uses: hashicorp/setup-terraform@v1
-
-- run: terraform init
-
-- run: terraform lint
-
-- run: terraform fmt -check -diff -recursive
