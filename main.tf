@@ -38,12 +38,12 @@ variable "fs-network" {
 // https://www.terraform.io/docs/providers/google/r/google_project_service.html
 // ----------------------------------------------------------------------------
 
-# resource "google_project_service" "file_api" {
-#   provider           = google
-#   project            = var.project
-#   service            = "file.googleapis.com"
-#   disable_on_destroy = false
-# }
+resource "google_project_service" "cloudfilestore_api" {
+  provider           = google
+  project            = var.project
+  service            = "file.googleapis.com"
+  disable_on_destroy = false
+}
 
 provider "google" {
   project = var.project
